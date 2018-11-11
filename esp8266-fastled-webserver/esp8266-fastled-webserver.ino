@@ -17,7 +17,7 @@
  */
 
 #include <FastLED.h>
-#define FASTLED_FORCE_SOFTWARE_SPI
+//#define FASTLED_FORCE_SOFTWARE_SPI
 
 extern "C" {
 #include "user_interface.h"
@@ -34,7 +34,6 @@ extern "C" {
 #include "GradientPalettes.h"
 
 #define ARRAY_SIZE(A) (sizeof(A) / sizeof((A)[0]))
-
 #include "Field.h"
 
 //#define RECV_PIN D4
@@ -52,8 +51,8 @@ ESP8266HTTPUpdateServer httpUpdateServer;
 
 #include "FSBrowser.h"
 
-#define DATA_PIN      13
-#define CLK_PIN     12
+#define DATA_PIN      3
+#define CLK_PIN     4
 #define LED_TYPE      APA102
 #define COLOR_ORDER   BGR
 #define NUM_LEDS      432
